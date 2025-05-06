@@ -42,6 +42,11 @@ PublisherId = "chaorenai"
 DisplayName = "comfyui_app"
 Icon = ""
 
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["comfyui_app", "comfyui_app.*"]
+
+
 [tool.setuptools.package-data]
 "*" = ["*.*"]
 
