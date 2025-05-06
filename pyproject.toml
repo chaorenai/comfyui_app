@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=70.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui_app"
+version = "1.0.0"
+description = "A suite of custom nodes for ComfyUI that make using ComfyUI feel like using an app."
+authors = [{ name = "sunnydu", email = "yinghanzi@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT license" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Framework :: ComfyUI"
+]
+dependencies = [
+  "transformers>=4.45.0",
+  "torch>=2.7.0",
+  "torchvision>=0.22.0",
+  "pillow>=11.0.0",
+  "numpy>=2.2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "bump-my-version",
+  "coverage",
+  "mypy",
+  "pre-commit",
+  "pytest",
+  "ruff"
+]
+
+[project.urls]
+bugs = "https://github.com/chaorenai/comfyui_app/issues"
+homepage = "https://github.com/chaorenai/comfyui_app"
+
+[tool.comfy]
+PublisherId = "chaorenai"
+DisplayName = "comfyui_app"
+Icon = ""
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+
+[tool.mypy]
+files = "."
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
+
+[tool.ruff]
+line-length = 140
+src = ["src", "tests"]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+  "S102",
+  "S307",
+  "W293",
+  "F"
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
