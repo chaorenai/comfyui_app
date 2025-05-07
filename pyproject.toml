@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "comfyui_app"
-version = "1.0.2"
+version = "1.0.3"
 description = "A suite of custom nodes for ComfyUI that make using ComfyUI feel like using an app."
-authors = [{ name = "sunnydu", email = "yinghanzi@gmail.com" }]
+authors = [{ name = "xiaodu", email = "yinghanzi@gmail.com" }]
 readme = "README.md"
 license = { text = "MIT license" }
 classifiers = [

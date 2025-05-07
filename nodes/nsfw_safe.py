@@ -20,7 +20,7 @@ def pil2tensor(image_pil):
     return tensor.permute(1, 2, 0)
 
 
-class nsfw_No:
+class nsfw_safe:
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -34,7 +34,7 @@ class nsfw_No:
                     "round": 0.001,
                     "display": "nsfw_threshold"
                 }),
-                "alternative_image": ("IMAGE",),
+                "backup_image": ("IMAGE",),
             },
         }
 
@@ -42,7 +42,7 @@ class nsfw_No:
     FUNCTION = "run"
     CATEGORY = "comfyui_app/tools"
 
-    def run(self, image, score, alternative_image):
+    def run(self, image, score, backup_image):
         global _classifier_pipeline
 
         if _classifier_pipeline is None:
@@ -57,7 +57,7 @@ class nsfw_No:
             is_nsfw = any(r["label"] == "nsfw" and r["score"] > score for r in result)
 
             if is_nsfw:
-                replacement = tensor2pil(alternative_image[0])
+                replacement = tensor2pil(backup_image[0])
                 resized = replacement.resize(pil_image.size, resample=Image.Resampling.LANCZOS)
                 out_tensor = pil2tensor(resized)
             else:
@@ -69,9 +69,9 @@ class nsfw_No:
 
 
 NODE_CLASS_MAPPINGS = {
-    "nsfw_No": nsfw_No
+    "nsfw_safe": nsfw_safe
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "nsfw_No": "nsfw_No"
+    "nsfw_safe": "nsfw_safe"
 }
