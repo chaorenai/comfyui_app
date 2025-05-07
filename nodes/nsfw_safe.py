@@ -52,14 +52,12 @@ class nsfw_safe:
 
         for i, img_tensor in enumerate(image):
             pil_image = tensor2pil(img_tensor)
-
             result = _classifier_pipeline(pil_image)
             is_nsfw = any(r["label"] == "nsfw" and r["score"] > score for r in result)
 
             if is_nsfw:
-                replacement = tensor2pil(backup_image[0])
-                resized = replacement.resize(pil_image.size, resample=Image.Resampling.LANCZOS)
-                out_tensor = pil2tensor(resized)
+                # 直接返回 backup_image 的原图和尺寸
+                out_tensor = backup_image[0]
             else:
                 out_tensor = img_tensor
 
