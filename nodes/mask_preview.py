@@ -28,9 +28,9 @@ class MaskPreview(SaveImage):
         return self.save_images(preview, "MaskPreview")
 
 NODE_CLASS_MAPPINGS = {
-    "comfyui_app: MaskPreview": MaskPreview
+    "ComfyUI_MaskPreview": MaskPreview
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "comfyui_app: MaskPreview": "MaskPreview"
+    "ComfyUI_MaskPreview": "MaskPreview"
 }

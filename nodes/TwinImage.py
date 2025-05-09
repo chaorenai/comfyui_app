@@ -130,10 +130,10 @@ class TwinImage: # Renamed from DiptychCreate
 # Add NODE_CLASS_MAPPINGS and NODE_DISPLAY_NAME_MAPPINGS if they are missing
 NODE_CLASS_MAPPINGS = {
     "InContextEditInstruction": InContextEditInstruction,
-    "comfyui_app_TwinImage": TwinImage
+    "TwinImage": TwinImage
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "InContextEditInstruction": "In-Context Edit Instruction",
-    "comfyui_app_TwinImage": "TwinImage"
+    "TwinImage": "TwinImage"
 }

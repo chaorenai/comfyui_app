@@ -65,9 +65,9 @@ class FillConditioning(ComfyNodeABC): # Added class definition
         return (out[0], out[1], out_latent)#return (c, out_latent)
 
 NODE_CLASS_MAPPINGS = {
-    "comfyui_app_FillConditioning": FillConditioning
+    "FillConditioning": FillConditioning
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "comfyui_app_FillConditioning": "FillConditioning"
+    "FillConditioning": "FillConditioning"
 }
