@@ -101,8 +101,8 @@ class Folders_List: # Renamed from Folders
         return (images, masks, file_paths)
 
 NODE_CLASS_MAPPINGS = {
-    "Folders_List": Folders_List # Updated key and value
+    "comfyui_app_Folders_List": Folders_List # Updated key and value
 }
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "Folders_List": "Folders_List" # Updated key and value
+    "comfyui_app_Folders_List": "Folders_List" # Updated key and value
 }
