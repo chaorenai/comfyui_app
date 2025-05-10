@@ -67,9 +67,9 @@ class nsfw_safe:
 
 
 NODE_CLASS_MAPPINGS = {
-    "nsfw_safe": nsfw_safe
+    "comfyui_app:nsfw_safe": nsfw_safe
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "nsfw_safe": "nsfw_safe"
+    "comfyui_app:nsfw_safe": "nsfw_safe"
 }

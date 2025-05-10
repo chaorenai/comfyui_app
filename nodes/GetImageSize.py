@@ -38,9 +38,9 @@ class GetImageSize:
         return (_image.width, _image.height, [_image.width, _image.height],)
 
 NODE_CLASS_MAPPINGS = {
-    "GetImageSize": GetImageSize
+    "comfyui_app:GetImageSize": GetImageSize
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "GetImageSize": "GetImageSize"
+    "comfyui_app:GetImageSize": "GetImageSize"
 }

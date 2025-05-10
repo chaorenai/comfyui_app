@@ -42,5 +42,5 @@ class Fill_Mask:
             region_tensor = _process_one(masks)
             return (region_tensor,)
 
-NODE_CLASS_MAPPINGS = {"Fill_Mask": Fill_Mask}
-NODE_DISPLAY_NAME_MAPPINGS = {"Fill_Mask": "Fill_Mask"}
+NODE_CLASS_MAPPINGS = {"comfyui_app:Fill_Mask": Fill_Mask}
+NODE_DISPLAY_NAME_MAPPINGS = {"comfyui_app:Fill_Mask": "Fill_Mask"}

@@ -51,9 +51,9 @@ class ResizeBySide:
 
     
 NODE_CLASS_MAPPINGS = {
-    "ResizeBySide": ResizeBySide
+    "comfyui_app:ResizeBySide": ResizeBySide
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "ResizeBySide": "ResizeBySide"
+    "comfyui_app:ResizeBySide": "ResizeBySide"
 }
