@@ -21,7 +21,8 @@ class NumericalOrder:
 
     def sort_numbers(self, numbers):
         # 过滤非整数元素
-        filtered_numbers = [num for num in numbers if isinstance(num, int)]
+        # 过滤非整数元素并去重
+        filtered_numbers = list(set([num for num in numbers if isinstance(num, int)]))
         
         # 排序
         sorted_numbers = sorted(filtered_numbers)
