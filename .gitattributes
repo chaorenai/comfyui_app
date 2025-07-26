@@ -1,0 +1,2 @@
+# 统一 Python 文件为 LF 换行
+*.py text eol=lf

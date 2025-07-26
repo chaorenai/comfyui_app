@@ -17,7 +17,7 @@ class NumericalOrder:
     RETURN_IS_LIST = (True,)
     RETURN_NAMES = ("sorted_numbers",)
     FUNCTION = "sort_numbers"
-    CATEGORY = "comfyui_app/tools"
+    CATEGORY = "comfyui_app/video"  # 节点分类
 
     def sort_numbers(self, numbers):
         # 过滤非整数元素
